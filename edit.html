@@ -1,0 +1,22 @@
+<style type="text/css">
+textarea {
+	width: 600px;
+	height: 120px;
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+}
+</style>
+
+<h1>Editing {{.Title}}</h1>
+
+<form action="/save/{{.Title}}" method="POST">
+<div><textarea autofocus name="body" rows="20" cols="80">{{printf "%s" .Body}}</textarea></div>
+<div><input type="submit" value="Save"></div>
+</form>
